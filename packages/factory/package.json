@@ -1,0 +1,49 @@
+{
+  "name": "@robotixai/harness",
+  "version": "0.1.0",
+  "description": "Provider-agnostic model harness — one interface for Anthropic, OpenAI, Ollama, and OpenRouter. Re-exports core types + createProvider factory.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rob-otix-ai/harness.git",
+    "directory": "packages/factory"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@robotixai/harness-core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@robotixai/harness-anthropic": "workspace:*",
+    "@robotixai/harness-mock": "workspace:*",
+    "@robotixai/harness-ollama": "workspace:*",
+    "@robotixai/harness-openai": "workspace:*",
+    "@robotixai/harness-openrouter": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@robotixai/harness-anthropic": { "optional": true },
+    "@robotixai/harness-openai": { "optional": true },
+    "@robotixai/harness-ollama": { "optional": true },
+    "@robotixai/harness-openrouter": { "optional": true },
+    "@robotixai/harness-mock": { "optional": true }
+  },
+  "devDependencies": {
+    "@robotixai/harness-anthropic": "workspace:*",
+    "@robotixai/harness-mock": "workspace:*",
+    "@robotixai/harness-ollama": "workspace:*",
+    "@robotixai/harness-openai": "workspace:*",
+    "@robotixai/harness-openrouter": "workspace:*",
+    "typescript": "^5.8.3"
+  }
+}

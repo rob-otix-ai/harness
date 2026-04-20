@@ -1,0 +1,27 @@
+{
+  "name": "@robotixai/harness-core",
+  "version": "0.1.0",
+  "description": "Provider-agnostic types and interfaces for the Rob-otix model harness",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rob-otix-ai/harness.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist .turbo"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

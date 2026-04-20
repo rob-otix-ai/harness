@@ -1,0 +1,32 @@
+{
+  "name": "@robotixai/harness-mock",
+  "version": "0.1.0",
+  "description": "Mock provider for testing code that uses the Rob-otix model harness",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rob-otix-ai/harness.git",
+    "directory": "packages/mock"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@robotixai/harness-core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^1.6.0"
+  }
+}
